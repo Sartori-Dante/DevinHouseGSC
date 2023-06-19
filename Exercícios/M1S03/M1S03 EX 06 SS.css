@@ -64,3 +64,103 @@ nav > a {
 header,
 footer {
 }
+:root {
+  font-family: sans-serif;
+}
+
+html,
+body,
+div,
+header,
+main,
+footer,
+p,
+span,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+a {
+  margin: 0;
+  border: 0;
+  padding: 0;
+}
+
+header {
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 2px;
+  -webkit-text-stroke-color: rgb(255, 208, 0);
+  background-color: rgb(0, 0, 0);
+  padding: 20px;
+  width: 1880px;
+}
+
+footer {
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 208, 0);
+  background-color: rgb(0, 0, 0);
+  font-size: 28px;
+  padding: 20px;
+  width: 1880px;
+}
+
+html,
+body {
+  width: 100vw;
+  min-height: 100vh;
+}
+
+#page-container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex-grow: 1;
+}
+
+nav {
+  color: rgb(0, 0, 0);
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: rgb(255, 208, 0);
+  background-color: rgb(0, 0, 0);
+  font-size: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  gap: 30px;
+}
+
+/* .board-container{
+  display: fle;
+} */
+
+.board-container > div {
+  display: flex;
+  font-size: 30px;
+  padding: 15px;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  text-align: border left;
+}
+
+.board-container img {
+  align-items: flex-start;
+  flex-direction: row;
+  width: 70%;
+  height: auto;
+}
+
+/* 
+#teste {
+  color: brown;
+  background-color: bisque;
+  font-size: 18px;
+  padding: 70px;
+  text-align: right;
+} */
