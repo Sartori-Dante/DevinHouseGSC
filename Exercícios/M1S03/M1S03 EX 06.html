@@ -26,27 +26,61 @@
         <main>
             <div class="board-container">
                 <div>
-                    <div>
-                        <!-- id="Tatooine" -->
-                        <figure><img src="Tatooine.png" alt="Tatooine"></figure>
-                        <!-- <p><i><b>Tatooine</b></i></p> -->
+                    <div class="box-container">
+                        <div class="image-container">
+                            <img src="Tatooine.png" alt="Tatooine">
+                        </div>
+                        <div class="text-container">
+                            <p id="title"><i><b>Tatooine</b></i></p>
+                            <p id="price">Prices starting at</p>
+                            <p id="tag">CDT 12.000,00</p>
+                        </div>
+                        <button class="button-view">SHOW ME MORE!</button>
                     </div>
-                    <div>
-                        <!-- id="Mustafar" -->
-                        <figure><img src="Mustafar.png" alt="Mustafar"></figure>
-                        <!-- <p><i><b>Mustafar</b></i></p> -->
+                    <div class="box-container">
+                        <div class="image-container">
+                            <img src="Mustafar.png" alt="Mustafar">
+                        </div>
+                        <div class="text-container">
+                            <p id="title"><i><b>Mustafar</b></i></p>
+                            <p id="price">Prices starting at</p>
+                            <p id="tag">CDT 34.000,00</p>
+                        </div>
+                        <button class="button-view">SHOW ME MORE!</button>
                     </div>
-                    <div>
-                        <!-- id="Coruscant" -->
-                        <figure><img src="Coruscant.png" alt="Coruscant"></figure>
-                        <!-- <p><i><b>Coruscant</b></i></p> -->
+                    <div class="box-container">
+                        <div class="image-container">
+                            <img src="Coruscant.png" alt="Coruscant">
+                        </div>
+                        <div class="text-container">
+                            <p id="title"><i><b>Coruscant</b></i></p>
+                            <p id="price">Prices starting at</p>
+                            <p id="tag">CDT 76.000,00</p>
+                        </div>
+                        <button class="button-view">SHOW ME MORE!</button>
                     </div>
                 </div>
+                <div class="form-container">
+                    <form>
+                        <input type="text" id="Origin" name="Origin" size="45" placeholder="Origin">
+                        <input type="text" id="Destination" name="Destination" size="45" placeholder="Destination">
+                        <b>Departure Date</b>
+                        <input type="date" id="Birthdate" name="Birthdate" size="30">
+                        <b>Return Date</b>
+                        <input type="date" id="Birthdate" name="Birthdate" size="30">
+                        <button class="button-search">Find me a transport!</button>
+                    </form>
+                </div>
+                
             </div>
         </main>
 
         <footer>
-            <p>Watto's Space Travel Agency</p>
+            <div class="footer-container">
+                <p id="title-footer">Watto's Space Travel Agency</p>
+                <p id="location-footer">Mos Espa - Tatooine - Outer Rim | WE DON'T SELL TO JEDI!</p>
+            </div>
+            
         </footer>
     </div>
 
