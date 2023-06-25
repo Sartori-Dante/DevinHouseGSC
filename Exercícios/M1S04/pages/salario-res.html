@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/salario-ss.css" />
+    <link rel="shortcut icon" href="../styles/calculadora.png" type="image/x-icon">
+    <title>Calculadora de Salário</title>
+</head>
+<body>
+    <div class="page-container">
+        <div class="resultado">
+            <p>Resultado</p>
+            <div class="inner-box">
+                <div id="left">
+                    <p>Imposto de renda:</p>
+                    <p>Contribuição INSS:</p>
+                    <p>Salário a receber:</p>
+                </div>
+                <div id="right">
+                    <p id="ir"></p>
+                    <p id="inss"></p>
+                    <p id="liquid"></p>
+                </div>
+            </div>
+            <button id="but-again" onclick="backPageinput()">Calcular Novamente</button>
+        </div>
+    </div>
+<script src="salario.js"></script>
+</body>
+</html>
