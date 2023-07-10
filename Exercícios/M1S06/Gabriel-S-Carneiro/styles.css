@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* CSS LOGIN */
+body {
+  background-color: white;
+}
+
+.page-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+  color: rgb(37, 37, 37);
+}
+
+.board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  background-color: rgb(236, 236, 236);
+
+  margin-top: 10%;
+
+  padding-top: 40px;
+  padding-bottom: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  border-radius: 5px;
+}
+
+#adm-login {
+  padding-left: 0px;
+}
+
+h3 {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+#Login {
+  margin-top: 30px;
+
+  font-size: 20px;
+  font-weight: bolder;
+
+  background-color: rgb(51, 93, 153);
+  border-radius: 3px;
+  color: white;
+
+  height: 40px;
+  width: 100px;
+}
+
+#input-email,
+#input-pw {
+  font-size: 23px;
+  width: 700px;
+  border-radius: 5px;
+}
+
+#error-msg-login,
+#error-msg-pass {
+  color: red;
+}
+
+[hidden] {
+  display: none;
+}
+
+/* CSS HOME */
+
+.page-container-home {
+  display: flex;
+  flex-direction: column;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: rgb(26, 26, 26);
+  font-weight: bold;
+}
+
+.header-container {
+  display: flex;
+  flex-direction: row;
+
+  width: 100%;
+  padding-right: 30px;
+  padding-left: 30px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  color: white;
+  background-color: rgb(26, 26, 26);
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+h1 {
+  padding-left: 30px;
+}
+
+#logout {
+  font-size: 20px;
+  font-weight: bolder;
+
+  background-color: rgb(51, 93, 153);
+  border-radius: 3px;
+  color: white;
+
+  height: 40px;
+  width: 100px;
+}
+
+/* TABELA */
+
+.booking-container {
+  display: flex;
+  flex-direction: column;
+
+  width: 100%;
+  max-width: 85%;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 20px auto;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.booking-container th,
+.booking-container td {
+  padding: 10px;
+  text-align: center;
+}
+
+.booking-container th {
+  background-color: rgb(51, 93, 153);
+  color: #ffffff;
+}
+
+.booking-container tbody tr:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+.linhaCpf {
+  min-width: 135px;
+}
