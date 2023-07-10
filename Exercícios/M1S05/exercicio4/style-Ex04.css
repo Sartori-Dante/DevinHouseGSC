@@ -1,0 +1,70 @@
+input[type="number"]#calc-tab {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+input[type="number"]#calc-tab::-webkit-inner-spin-button,
+input[type="number"]#calc-tab::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+  background-color: aliceblue;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.page-container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  padding-top: 25px;
+}
+
+.Controls {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+
+  gap: 15%;
+
+  padding-bottom: 3%;
+}
+
+.Result {
+  display: flex;
+  flex-direction: column;
+
+  padding-top: 15px;
+  padding-bottom: 15px;
+
+  justify-content: center;
+  align-items: center;
+
+  font-weight: bolder;
+  color: aliceblue;
+
+  background-color: rgb(101, 110, 119);
+  border: 3px solid rgb(18, 36, 33);
+  border-radius: 15px;
+  width: 20%;
+}
+
+#calc-tab {
+  font-size: 24px;
+  text-align: center;
+}
+
+#but-calc,
+#but-back {
+  font-size: 24px;
+  font-weight: bolder;
+  color: rgb(18, 36, 33);
+
+  border-radius: 5px;
+}
