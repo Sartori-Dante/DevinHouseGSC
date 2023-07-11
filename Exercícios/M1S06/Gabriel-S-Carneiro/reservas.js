@@ -30,7 +30,7 @@ function addLine()
         tr.appendChild(tdCPF)
 
         const tdData = document.createElement('td')
-        tdData.innerHTML = reserva.per_entry + ' - ' + reserva.per_exit
+        tdData.innerHTML = `${reserva.per_entry} - ${reserva.per_exit}`
         tr.appendChild(tdData)
 
         const tdAcoes = document.createElement('td')
