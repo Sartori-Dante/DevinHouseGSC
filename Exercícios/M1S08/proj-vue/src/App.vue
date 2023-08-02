@@ -1,47 +1,45 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
-</script>
-
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
+  <div>
+    <h1>Subject: {{ name }}</h1>
+    <p>Id Number: {{ id }}</p>
+    <p>Curent Energy Balance: {{ balance }}</p>
+    <p>New Energy Balance: {{ balance + balance/5 }}</p>
 
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-    </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+    <h2>Consumption Factor Calculator</h2>
+    <input type="number" placeholder="set energy usage in Kw/h" v-model="energyUsage">
+    <input type="number" placeholder="set time of surge in seconds" v-model="timeSurge">
+    <button @click="calculate()">Calculate</button>
+    <!-- tb funciona >>> v-on:click -->
+    <p>Consumption Average: {{ consumption }} ECA</p>
+  </div>
 </template>
 
-<style scoped>
-header {
-  line-height: 1.5;
-}
+<script>
+export default {
+  data(){
+    return{
+      name: "Dante_Mcleod",
+      id: 238794,
+      balance: 100,
+      consumption: "",
+      energyUsage: 0,
+      timeSurge: 0
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
-}
+    }
+  },
+  methods: {
+    calculate(){
+      if(this.energyUsage == 0 || this.timeSurge == 0){
+        alert("Pleas fill both fields")
+        return
+      }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
+      this.consumption = (this.energyUsage/this.timeSurge)
+    }
   }
 }
+</script>
+
+<style>
+
 </style>
