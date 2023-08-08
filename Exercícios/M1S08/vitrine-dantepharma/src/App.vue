@@ -47,7 +47,7 @@ export default {
 </style>
 
 
-export default {
+<!-- export default {
   components: {
     Header,
     FormularioNovoMedicamento,
@@ -85,4 +85,4 @@ export default {
       })
     }
   }
-}
+} -->
