@@ -1,66 +1,38 @@
 <template>
-  <Header>
-
-  </Header>
-  
-  <FormularioNovoMedicamento>
-
-  </FormularioNovoMedicamento>
-
-  <main>
-    <div ></div>
-  </main>
+  <Header />
+  <FormularioNovoMedicamento @registrar="AdicionarMedicamento"/>
+  <div class="=container">
+    <CardMedicamento
+      v-for="medicamento in listaMedicamentos"
+      :key="medicamento.id"
+      @favoritar="FavoritarMedicamento"
+      :nome="medicamento.nome"
+      :laboratorio="medicamento.laboratorio"
+      :preco="medicamento.preco"
+      :id="medicamento.id"
+    />
+  </div>
 </template>
 
 <script>
+import {v4 as uuidv4} from 'uuid';
 import Header from './components/Header.vue';
 import FormularioNovoMedicamento from './components/FormularioNovoMedicamento.vue'
+import CardMedicamento from './components/CardMedicamento.vue';
 
 export default {
-  components: {
-    Header,
-    FormularioNovoMedicamento
-  },
-  data(){
-    return{
-      
-    }
-  },
-  AdicionarMedicamento(nome, lab, preco) {
-    if (nome == "" || laboratorio == "" || preco == 0) {
-      alert("Preencha todos os dados")
-      return
-    }
-
-    const novoMedicamento = {
-      id: uuiddv4(),
-      nome: nome,
-      laboratorio: lab,
-      preco: preco,
-      favorito: false
-    }
-  }
-}
-</script>
-
-<style scoped>
-</style>
-
-
-<!-- export default {
   components: {
     Header,
     FormularioNovoMedicamento,
     CardMedicamento
   },
-  data() {
-    return {
+  data(){
+    return{
       listaMedicamentos: []
     }
   },
   methods: {
     AdicionarMedicamento(nome, laboratorio, preco) {
-
       if (nome == "" || laboratorio == "" || preco == 0) {
         alert("Preencha todos os dados")
         return
@@ -76,13 +48,23 @@ export default {
 
       this.listaMedicamentos.push(novoMedicamento)
     },
-    FavoritarMedicamento(id) {
-      // editar o medicamento e marcar como favorito
+    FavoritarMedicamento (id) {
       this.listaMedicamentos = this.listaMedicamentos.map(item => {
-        if(item.id == id){
+        if(item.idd == id){
           item.favorito = !item.favorito
         }
       })
     }
   }
-} -->
+  
+}
+</script>
+
+<style scoped>
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  widows: 100vw;
+  padding: 1em;
+}
+</style>

@@ -3,17 +3,17 @@
         <slot class="cadastro-med" name="cadastro-med">
             <h2>Novo Medicamento</h2>
             <div class="input-container">
-                 <label for="nome-med">Medicamento</label>
-                <input name="nome-med" type="text"
-                >
+                <label for="medicamento">Medicamento</label>
+                <input type="text" id="medicamento" v-model="medicamento">
+
                 <label for="nome-lab">Laboratório</label>
-                <input name="nome-lab" type="text">
+                <input type="text" id="nome-lab" v-model="laboratorio" >
 
-                <label for="valor">Preço</label>
-                <input name="valor" type="number">
+                <label for="preco">Preço</label>
+                <input type="number" id="preco" v-model="preco">
 
-                <button type="submit">Registrar</button>
-                <!-- <button @click="$emit('cadastrar', medicamento, laboratorio, preco)">Cadastrar</button> -->
+                <button @click="$emit('registrar', medicamento, laboratorio, preco)">Registrar</button>
+                
             </div>
         </slot>
     </header>
@@ -21,7 +21,13 @@
 
 <script>
 export default {
-
+    data () {
+        return {
+            medicamento: "",
+            laboratorio: "",
+            preco: 0
+        }
+    }
 }
 </script>
 
