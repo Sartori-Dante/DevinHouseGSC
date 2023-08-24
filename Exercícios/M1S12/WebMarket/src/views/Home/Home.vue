@@ -29,22 +29,21 @@
     </v-layout> -->
 
     <v-row>
-        <v-col
-          v-for="produto of produtos"
-          :key="produto.id"
-          cols="12" sm="6" md="4" lg="3"
-        >
-         <v-card variant="tonal" flat class="text-xs-center ma-3">
-            <v-responsive class="pt-4">
-              <v-img :width="320" :height="320" aspect-ratio="1/1" :src="produto.imagem"></v-img>
-            </v-responsive>
+        <v-col v-for="produto of produtos" :key="produto.id" cols="12" sm="6" md="4" lg="3">
+         <v-card :title=produto.nome variant="tonal" flat class="text-xs-center ma-5 pa-3" width="320" height="500">
+            <v-img :width="320" :height="320" aspect-ratio="1/1" :src="produto.imagem"></v-img>
+            <!-- <v-responsive class="pt-4">
+              
+            </v-responsive> -->
             <v-cart-text>
-              <div class="subheading">{{ produto.nome }}</div>
-              <div class="grey--text">{{ produto.preco }}</div>
-              <div class="grey--text">{{ produto.parcela }}</div>
+              <div class="subheading font-weight-black text-h4" >Por R$ {{ produto.preco }}</div>
+              <div class="grey--text">10x de R$ {{ produto.parcela }}</div>
             </v-cart-text>
             <v-card-actions>
-              <v-btn dark color="blue">COMPRAR</v-btn>
+              <v-btn dark color="blue">
+                <v-icon class="" size="x-large" >mdi-cart</v-icon>
+                COMPRAR
+              </v-btn>
             </v-card-actions>
           </v-card>
         </v-col>
