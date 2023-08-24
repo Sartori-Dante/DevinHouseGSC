@@ -7,12 +7,12 @@
       <span class="text-h4 font-weight-black">Otaku Web Market</span>
     </v-app-bar-title>
 
-    <v-btn dark color="blue">
+    <v-btn dark color="blue" to="/">
       <svg-icon type="mdi" :path="store"></svg-icon>
       Store
     </v-btn>
    
-    <v-btn dark color="blue">
+    <v-btn dark color="blue" to="/cart">
       <svg-icon type="mdi" :path="cart"></svg-icon>
       Cart
     </v-btn>
