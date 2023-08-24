@@ -1,5 +1,7 @@
 <template>
-    <h1>ALOUS</h1>
+    <div class="cart">
+        <h1>CART</h1>
+    </div>
 </template>
 
 <script>

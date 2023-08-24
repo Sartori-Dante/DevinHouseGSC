@@ -1,28 +1,18 @@
 // Composables
 import { createRouter, createWebHistory } from "vue-router";
+import Home from "../views/Home/Home.vue";
+import Cart from "../views/Cart/Cart.vue";
 
 const routes = [
   {
     path: "/",
-    component: () => import("@/layouts/default/Default.vue"),
-    children: [
-      {
-        path: "",
-        name: "Home",
-        component: () => import("@/views/Home/Home.vue"),
-      },
-    ],
+    name: "Home",
+    component: Home,
   },
   {
     path: "/cart",
-    component: () => import("@/layouts/default/Default.vue"),
-    children: [
-      {
-        path: "",
-        name: "Cart",
-        component: () => import("@/views/Cart/Cart.vue"),
-      },
-    ],
+    name: "Cart",
+    component: Cart,
   },
 ];
 
