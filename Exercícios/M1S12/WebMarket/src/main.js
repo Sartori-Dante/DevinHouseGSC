@@ -5,16 +5,21 @@
  */
 
 // Components
-import App from './App.vue'
+import App from "./App.vue";
 
 // Composables
-import { createApp } from 'vue'
+import { createApp } from "vue";
 
 // Plugins
-import { registerPlugins } from '@/plugins'
+import { registerPlugins } from "@/plugins";
 
-const app = createApp(App)
+//Vuex
+import store from "./store";
 
-registerPlugins(app)
+const app = createApp(App);
 
-app.mount('#app')
+registerPlugins(app);
+
+app.mount("#app");
+
+store(app);

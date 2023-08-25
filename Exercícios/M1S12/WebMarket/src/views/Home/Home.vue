@@ -68,7 +68,8 @@ export default {
         //   id: 2,
         //   nome: 'Funko 02'
         // }
-      ]
+      ],
+      globalMsg: this.$store.state.message
 
     }
   },
