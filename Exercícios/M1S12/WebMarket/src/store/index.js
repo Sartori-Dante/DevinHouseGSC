@@ -41,7 +41,7 @@ const store = createStore({
       console.commit("alterarTeste", value.nome);
     },
     adicionarProduto(context, value) {
-      context.commit("addProdCart", value.product);
+      context.commit("addProdCart", value.produto);
     },
   },
 });

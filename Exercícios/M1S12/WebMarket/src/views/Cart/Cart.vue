@@ -13,7 +13,7 @@
           </tr>
         </thead>
         <tbody>
-          <tr v-for="item in this.$store.state.produtosCarrinho" :key="item.id">
+          <tr v-for="item in this.$store.state.cartProd" :key="item.id">
             <td><img :src="item.imagem" width="30" /></td>
             <td>{{ item.nome }}</td>
             <td>{{ item.quantidade }}</td>
