@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Loja {{ globalMsg }}</h1>
+    <h1>Loja</h1>
     <v-row>
         <v-col v-for="produto of produtos" :key="produto.id" cols="12" sm="6" md="4" lg="3">
          <v-card :title=produto.nome variant="tonal" flat class="text-xs-center ma-5 pa-3" width="320" height="500">
