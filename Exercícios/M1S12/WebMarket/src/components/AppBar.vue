@@ -2,9 +2,9 @@
   <v-app-bar class="d-flex align-center">
     <v-icon class="pl-5" size="x-large" >mdi-shuriken</v-icon>
     <v-app-bar-title class="d-flex align-center">
-      
-      <!-- <svg-icon width="200"  type="mdi" :path="shuriken"></svg-icon> -->
-      <span class="text-h4 font-weight-black">Otaku Web Market</span>
+      <v-btn color="d-flex align-center darken grey" to="/">
+        <span class="text-h4 font-weight-black">Otaku Web Market</span>
+      </v-btn>
     </v-app-bar-title>
 
     <v-btn dark color="blue" to="/">

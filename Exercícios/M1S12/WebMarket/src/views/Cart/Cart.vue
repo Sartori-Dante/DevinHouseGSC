@@ -1,8 +1,8 @@
 <template>
-    <div class="cart">
+    <div class="cart ma-5">
         <h1>Carrinho</h1>
 
-          <v-table>
+      <v-table class="pb-5">
         <thead>
           <tr>
             <th class="text-left">Imagem</th>
@@ -28,6 +28,10 @@
           </tr>
         </tbody>
       </v-table>
+      <v-btn class="pt-pb-4" dark color="blue" to="/pay">
+        <v-icon class="" size="x-large" >mdi-credit-card</v-icon>
+        COMPRAR
+      </v-btn>
     </div>
 </template>
 
