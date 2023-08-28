@@ -22,4 +22,6 @@ registerPlugins(app);
 
 app.mount("#app");
 
-store(app);
+//store(app);
+
+app.use(store);

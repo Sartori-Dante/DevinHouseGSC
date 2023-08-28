@@ -1,6 +1,6 @@
 <template>
   <div class="home">
-    <h1>Loja</h1>
+    <h1>Loja {{ globalMsg }}</h1>
     <!-- <ul>
       <li v-for="produto of produtos" :key="produto.id">
         {{ produto.imagem }}
@@ -36,11 +36,13 @@
               
             </v-responsive> -->
             <v-cart-text>
-              <div class="subheading font-weight-black text-h4" >Por {{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.preco) }}</div>
-              <div class="grey--text">10x de {{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.parcela) }}</div>
+              <div class="subheading font-weight-black text-h4" >Por
+                {{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.preco) }}</div>
+              <div class="grey--text">10x de
+                {{ new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' }).format(produto.parcela) }}</div>
             </v-cart-text>
             <v-card-actions>
-              <v-btn dark color="blue">
+              <v-btn dark color="blue" @click="() => this.$store.dispatch('adicionarProduto', {produto})">
                 <v-icon class="" size="x-large" >mdi-cart</v-icon>
                 COMPRAR
               </v-btn>
@@ -81,6 +83,15 @@ export default {
     } catch (e) {
       console.error(e);
       alert("Falha ao recuperar os produtos da database")
+    }
+  },
+  computed:{
+    prodRestantes() {
+      return this.produtos.filler((produto) => {
+        const itemExiste = this.$store.state.cartProd.find((item) => item.id === produto.id)
+        if (itemExiste) return false
+        return true
+      })
     }
   }
 }
