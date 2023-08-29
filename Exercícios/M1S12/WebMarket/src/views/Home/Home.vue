@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home ma-5">
     <h1>Loja</h1>
     <v-row>
         <v-col v-for="produto of produtos" :key="produto.id" cols="12" sm="6" md="4" lg="3">
